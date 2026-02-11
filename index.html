@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -226,12 +225,11 @@
         }
         
         .photo-placeholder {
+            width: 100%;
+            height: auto;
             aspect-ratio: 1;
-            background: linear-gradient(135deg, #e8e0d0 0%, #f5f1e8 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
+            object-fit: cover;
+            display: block;
             margin-bottom: 15px;
         }
         
@@ -387,15 +385,19 @@
                 </p>
                 
                 <p>
-                    WhenI think of you,I feel such happiness that tightens my heart, making the time slow down and the world; softer, kinder and more beautiful.
+                    When I think of you, I feel such happiness that tightens my heart, making the time slow down and the world softer, kinder and more beautiful.
                 </p>
-                   Loving you feels like standing beneath an endless night sky. No matter how many times I look at you, I never run out of wonder.
+                <p>
+                    Loving you feels like standing beneath an endless night sky. No matter how many times I look at you, I never run out of wonder.
+                </p>
                 <p>
                     If I had a thousand lifetimes, I'd still spend each one finding you. If I had a thousand hearts, I'd still give you every single one. 
                 </p>
-                    And If love were a universe, you would be its brightest star.
                 <p>
-                     I know Long distance is hard. But if I can build an entire mystery from miles away just to see you smile, imagine what I'll do when we're finally together.
+                    And if love were a universe, you would be its brightest star.
+                </p>
+                <p>
+                     I know long distance is hard. But if I can build an entire mystery from miles away just to see you smile, imagine what I'll do when we're finally together.
                 </p>
                 
                 <p class="handwritten">
@@ -414,19 +416,19 @@
         <h2 class="section-title">Evidence of Us</h2>
         <div class="photo-grid">
             <div class="photo-card" style="--rotation: -3deg;">
-                <div class="photo1.jpeg"></div>
+                <img src="photo1.jpeg" alt="Our first photo together" class="photo-placeholder">
                 <p class="photo-caption">Our first photo together</p>
             </div>
             <div class="photo-card" style="--rotation: 2deg;">
-                <div class="photo4.jpeg"></div>
+                <img src="photo4.jpeg" alt="That smile I can't forget" class="photo-placeholder">
                 <p class="photo-caption">That smile I can't forget</p>
             </div>
             <div class="photo-card" style="--rotation: -2deg;">
-                <div class="photo5.jpeg"></div>
+                <img src="photo5.jpeg" alt="The moment I knew" class="photo-placeholder">
                 <p class="photo-caption">The moment I knew</p>
             </div>
             <div class="photo-card" style="--rotation: 3deg;">
-                <div class="photo3.jpeg"></div>
+                <img src="photo3.jpeg" alt="Counting days until I see you" class="photo-placeholder">
                 <p class="photo-caption">Counting days until I see you</p>
             </div>
         </div>
@@ -440,10 +442,10 @@
         <div class="music-container">
             <div class="vinyl-record"></div>
             <h2>Our Song</h2>
-            <p class="song-title">"Apocalypse" by [Cigarettes after sex]</p>
+            <p class="song-title">"Apocalypse" by Cigarettes After Sex</p>
             <button class="play-button-large" onclick="playSong()">
                 <span>▶</span>
-                <span>Play Song</span>
+                <span>Play on Spotify</span>
             </button>
             <p style="margin-top: 30px; opacity: 0.7; font-size: 14px;">
 
@@ -483,12 +485,9 @@
             document.querySelector('.letter-section').scrollIntoView({ behavior: 'smooth' });
         });
         
-        // Play song function
+        // Play song function - opens Spotify in new tab
         function playSong() {
-            // Add your audio here
-             const audio = new Audio('https://open.spotify.com/track/1oAwsWBovWRIp7qLMGPIet?si=2f2509a563f74105');
-            audio.play();
-            alert('https://open.spotify.com/track/1oAwsWBovWRIp7qLMGPIet?si=2f2509a563f74105');
+            window.open('https://open.spotify.com/track/1oAwsWBovWRIp7qLMGPIet?si=2f2509a563f74105', '_blank');
         }
         
         // Reveal animations on scroll
@@ -515,4 +514,3 @@
     </script>
 </body>
 </html>
-
